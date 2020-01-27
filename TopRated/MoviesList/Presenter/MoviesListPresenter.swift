@@ -23,4 +23,8 @@ class MoviesListPresenter: MoviesListPresenterProtocol, MoviesListInteractorOutp
   func didFetchTopRatedMovies(movies: [Movie]) {
     view?.reloadTable(with: movies)
   }
+  
+  func showMovieDetail(forMovie movie: Movie) {
+    wireFrame?.presentMovieDetailScreen(from: view!, forMovie: movie)
+  }
 }
