@@ -17,6 +17,7 @@
 		F70D082523DF2C99003B14ED /* MoviesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D082423DF2C99003B14ED /* MoviesListPresenter.swift */; };
 		F70D082723DF2CC6003B14ED /* MoviesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D082623DF2CC6003B14ED /* MoviesListInteractor.swift */; };
 		F70D082923DF2D1C003B14ED /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D082823DF2D1C003B14ED /* MoviesListViewController.swift */; };
+		F70D082B23DF3232003B14ED /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D082A23DF3232003B14ED /* MovieTableViewCell.swift */; };
 		F74CAE5523DF29BC003A63D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74CAE5423DF29BC003A63D2 /* AppDelegate.swift */; };
 		F74CAE5723DF29BC003A63D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74CAE5623DF29BC003A63D2 /* SceneDelegate.swift */; };
 		F74CAE5C23DF29BC003A63D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74CAE5A23DF29BC003A63D2 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		F70D082423DF2C99003B14ED /* MoviesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListPresenter.swift; sourceTree = "<group>"; };
 		F70D082623DF2CC6003B14ED /* MoviesListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListInteractor.swift; sourceTree = "<group>"; };
 		F70D082823DF2D1C003B14ED /* MoviesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
+		F70D082A23DF3232003B14ED /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		F74CAE5123DF29BC003A63D2 /* TopRated.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopRated.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F74CAE5423DF29BC003A63D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F74CAE5623DF29BC003A63D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				F74CAE5A23DF29BC003A63D2 /* Main.storyboard */,
 				F70D082823DF2D1C003B14ED /* MoviesListViewController.swift */,
+				F70D082A23DF3232003B14ED /* MovieTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			files = (
 				F70D082323DF2C73003B14ED /* MovieResults.swift in Sources */,
 				F74CAE5F23DF29BC003A63D2 /* TopRated.xcdatamodeld in Sources */,
+				F70D082B23DF3232003B14ED /* MovieTableViewCell.swift in Sources */,
 				F70D081F23DF2C3B003B14ED /* TMDBResponse.swift in Sources */,
 				F70D082723DF2CC6003B14ED /* MoviesListInteractor.swift in Sources */,
 				F70D081923DF2BB4003B14ED /* MoviesListLocalDataManager.swift in Sources */,

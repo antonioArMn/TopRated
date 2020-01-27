@@ -20,7 +20,7 @@ class MoviesListPresenter: MoviesListPresenterProtocol, MoviesListInteractorOutp
     interactor?.fetchTopRatedMovies()
   }
   
-  func didFetchTopRatedMovies() {
-    view?.reloadTable()
+  func didFetchTopRatedMovies(movies: [Movie]) {
+    view?.reloadTable(with: movies)
   }
 }

@@ -18,7 +18,10 @@ class MoviesListInteractor: MoviesListInteractorInputProtocol {
   
   func fetchTopRatedMovies() {
     APIDataManager?.retriveTopRatedMovies(completion: { (movies, error) in
-      print(movies)
+      if let message = error {
+        print(message)
+      }
+      self.presenter?.didFetchTopRatedMovies(movies: movies)
     })
   }
 }

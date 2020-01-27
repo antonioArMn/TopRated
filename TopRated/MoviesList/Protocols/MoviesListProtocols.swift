@@ -14,7 +14,7 @@ protocol MoviesListViewProtocol: class {
   /**
   * Add here your methods for communication PRESENTER -> VIEW
   */
-  func reloadTable()
+  func reloadTable(with movies: [Movie])
 }
 
 protocol MoviesListWireFrameProtocol: class {
@@ -38,7 +38,7 @@ protocol MoviesListInteractorOutputProtocol: class {
   /**
   * Add here your methods for communication INTERACTOR -> PRESENTER
   */
-  func didFetchTopRatedMovies()
+  func didFetchTopRatedMovies(movies: [Movie])
 }
 
 protocol MoviesListInteractorInputProtocol: class
