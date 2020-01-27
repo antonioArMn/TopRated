@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Movie: Codable, Equatable {
     
@@ -28,6 +29,10 @@ struct Movie: Codable, Equatable {
     var releaseYear: String {
         return String(releaseDate.prefix(4))
     }
+  
+  var posterImage: UIImage {
+    return UIImage(named: "PosterPlaceholder")!
+  }
     
     enum CodingKeys: String, CodingKey {
         case posterPath = "poster_path"

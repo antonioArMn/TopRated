@@ -18,11 +18,14 @@ class MoviesListAPIDataManager: MoviesListAPIDataManagerInputProtocol {
     static let apiKeyParam = "?api_key=\(MoviesListAPIDataManager.apiKey)"
     
     case getTopRatedMovies
+    case getPosterImage(String)
     
     var stringValue: String {
       switch self {
       case .getTopRatedMovies:
         return Endpoints.base + "/movie/top_rated" + Endpoints.apiKeyParam
+      case .getPosterImage(let posterPath):
+        return "https://image.tmdb.org/t/p/w500\(posterPath)"
       }
     }
     
@@ -71,5 +74,14 @@ class MoviesListAPIDataManager: MoviesListAPIDataManagerInputProtocol {
         completion([], error)
       }
     }
+  }
+  
+  class func downloadPosterImage(posterPath: String, completion: @escaping (Data?, Error?) -> Void) {
+      let task = URLSession.shared.dataTask(with: Endpoints.getPosterImage(posterPath).url) { (data, response, error) in
+          DispatchQueue.main.async {
+              completion(data, error)
+          }
+      }
+      task.resume()
   }
 }

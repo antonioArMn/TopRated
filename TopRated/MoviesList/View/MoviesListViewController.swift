@@ -46,6 +46,15 @@ extension MoviesListViewController: UITableViewDataSource, UITableViewDelegate {
     let movie = movies[indexPath.row]
     cell.titleLabel.text = movie.title
     cell.releaseDate.text = movie.releaseDate
+    cell.posterImageView.image = movie.posterImage
+    
+    if let posterPath = movie.posterPath {
+      MoviesListAPIDataManager.downloadPosterImage(posterPath: posterPath) { (data, error) in
+        guard let data = data else { return }
+        let image = UIImage(data: data)
+        cell.posterImageView.image = image
+      }
+    }
     
     return cell
   }
