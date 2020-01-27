@@ -83,7 +83,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="116.51785714285714"/>
+            <point key="canvasLocation" x="897" y="117"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JKG-eA-lt2">
+            <objects>
+                <viewController id="DwW-JZ-DUt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aJd-2V-72R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="XMr-Jo-s3k"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dgf-cF-YNJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1667" y="117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7RO-jG-iYp">
