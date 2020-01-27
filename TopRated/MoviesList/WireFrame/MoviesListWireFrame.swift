@@ -37,26 +37,10 @@ class MoviesListWireFrame: MoviesListWireFrameProtocol {
     return UIViewController()
   }
   
-
-//  class func presentMoviesListModule() -> UIViewController {
-//
-//        // Generating module components
-//        let stotyboard = UIStoryboard(name: "MoviesList", bundle: Bundle.main)
-//      let navController = stotyboard.instantiateViewController
-//        let view: MoviesListViewProtocol = stotyboard.instantiateViewController(withIdentifier: "") as! MoviesListViewProtocol
-//        let presenter: MoviesListPresenterProtocol & MoviesListInteractorOutputProtocol = MoviesListPresenter()
-//        let interactor: MoviesListInteractorInputProtocol = MoviesListInteractor()
-//        let APIDataManager: MoviesListAPIDataManagerInputProtocol = MoviesListAPIDataManager()
-//        let localDataManager: MoviesListLocalDataManagerInputProtocol = MoviesListLocalDataManager()
-//        let wireFrame: MoviesListWireFrameProtocol = MoviesListWireFrame()
-//
-//        // Connecting
-//        view.presenter = presenter
-//        presenter.view = view
-//        presenter.wireFrame = wireFrame
-//        presenter.interactor = interactor
-//        interactor.presenter = presenter
-//        interactor.APIDataManager = APIDataManager
-//        interactor.localDatamanager = localDataManager
-//  }
+  func presentMovieDetailScreen(from view: MoviesListViewProtocol, forMovie movie: Movie) {
+    let movieDetailVC = MovieDetailWireFrame.createMovieDetailModule(for: movie)
+    if let sourceView = view as? UIViewController {
+      sourceView.navigationController?.pushViewController(movieDetailVC, animated: true)
+    }
+  }
 }

@@ -22,6 +22,7 @@ protocol MoviesListWireFrameProtocol: class {
   /**
   * Add here your methods for communication PRESENTER -> WIREFRAME
   */
+  func presentMovieDetailScreen(from view: MoviesListViewProtocol, forMovie movie: Movie)
 }
 
 protocol MoviesListPresenterProtocol: class {
@@ -32,6 +33,7 @@ protocol MoviesListPresenterProtocol: class {
   * Add here your methods for communication VIEW -> PRESENTER
   */
   func viewDidLoad()
+  func showMovieDetail(forMovie movie: Movie)
 }
 
 protocol MoviesListInteractorOutputProtocol: class {

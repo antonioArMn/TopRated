@@ -11,17 +11,17 @@ import UIKit
 
 class MovieDetailWireFrame: MovieDetailWireFrameProtocol {
 
-    class func presentMovieDetailModule(fromView vc:UIViewController) {
-
-        // Generating module components
-        let stotyboard = UIStoryboard(name: "", bundle: Bundle.main)
-        let view: MovieDetailViewProtocol = stotyboard.instantiateViewController(withIdentifier: "") as! MovieDetailViewProtocol
-        let presenter: MovieDetailPresenterProtocol & MovieDetailInteractorOutputProtocol = MovieDetailPresenter()
+    class func createMovieDetailModule(for movie: Movie) -> UIViewController {
+      
+      let viewController = mainStoryboard.instantiateViewController(withIdentifier: "MovieDetailController")
+      
+      if let view = viewController as? MovieDetailViewController {
+        let presenter: MovieDetailPresenterProtocol & MovieDetailInteractorOutputProtocol = MovieDetailPresenter(movie: movie)
         let interactor: MovieDetailInteractorInputProtocol = MovieDetailInteractor()
         let APIDataManager: MovieDetailAPIDataManagerInputProtocol = MovieDetailAPIDataManager()
         let localDataManager: MovieDetailLocalDataManagerInputProtocol = MovieDetailLocalDataManager()
         let wireFrame: MovieDetailWireFrameProtocol = MovieDetailWireFrame()
-
+        
         // Connecting
         view.presenter = presenter
         presenter.view = view
@@ -31,7 +31,12 @@ class MovieDetailWireFrame: MovieDetailWireFrameProtocol {
         interactor.APIDataManager = APIDataManager
         interactor.localDatamanager = localDataManager
         
-        
-        
+        return viewController
+      }
+      return UIViewController()
     }
+  
+  static var mainStoryboard: UIStoryboard {
+      return UIStoryboard(name: "Main", bundle: Bundle.main)
+  }
 }

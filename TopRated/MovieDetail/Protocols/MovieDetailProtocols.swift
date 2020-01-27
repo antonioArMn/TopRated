@@ -10,26 +10,28 @@ import Foundation
 import UIKit
 
 protocol MovieDetailViewProtocol: class {
-    var presenter: MovieDetailPresenterProtocol? { get set }
-    /**
-    * Add here your methods for communication PRESENTER -> VIEW
-    */
+  var presenter: MovieDetailPresenterProtocol? { get set }
+  /**
+  * Add here your methods for communication PRESENTER -> VIEW
+  */
+  func setupView(with movie: Movie)
 }
 
 protocol MovieDetailWireFrameProtocol: class {
-    static func presentMovieDetailModule(fromView vc: UIViewController)
+    static func createMovieDetailModule(for movie: Movie) -> UIViewController
     /**
     * Add here your methods for communication PRESENTER -> WIREFRAME
     */
 }
 
 protocol MovieDetailPresenterProtocol: class {
-    var view: MovieDetailViewProtocol? { get set }
-    var interactor: MovieDetailInteractorInputProtocol? { get set }
-    var wireFrame: MovieDetailWireFrameProtocol? { get set }
-    /**
-    * Add here your methods for communication VIEW -> PRESENTER
-    */
+  var view: MovieDetailViewProtocol? { get set }
+  var interactor: MovieDetailInteractorInputProtocol? { get set }
+  var wireFrame: MovieDetailWireFrameProtocol? { get set }
+  /**
+  * Add here your methods for communication VIEW -> PRESENTER
+  */
+  func viewDidLoad()
 }
 
 protocol MovieDetailInteractorOutputProtocol: class {

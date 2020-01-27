@@ -9,9 +9,18 @@
 import Foundation
 
 class MovieDetailPresenter: MovieDetailPresenterProtocol, MovieDetailInteractorOutputProtocol {
-    weak var view: MovieDetailViewProtocol?
-    var interactor: MovieDetailInteractorInputProtocol?
-    var wireFrame: MovieDetailWireFrameProtocol?
+  
+  let movie: Movie
+  
+  weak var view: MovieDetailViewProtocol?
+  var interactor: MovieDetailInteractorInputProtocol?
+  var wireFrame: MovieDetailWireFrameProtocol?
 
-    init() {}
+  init(movie: Movie) {
+    self.movie = movie
+  }
+  
+  func viewDidLoad() {
+    view?.setupView(with: self.movie)
+  }
 }
