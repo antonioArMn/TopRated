@@ -120,25 +120,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEN-i4-gi5">
+                                <rect key="frame" x="216" y="212.5" width="190" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="oA2-je-8Km" firstAttribute="top" secondItem="eJx-PL-bk6" secondAttribute="bottom" constant="8" id="689-BA-dMQ"/>
                             <constraint firstItem="XMr-Jo-s3k" firstAttribute="trailing" secondItem="eJx-PL-bk6" secondAttribute="trailing" constant="8" id="EFW-qs-djA"/>
+                            <constraint firstItem="fEN-i4-gi5" firstAttribute="top" secondItem="oA2-je-8Km" secondAttribute="bottom" constant="8" id="F5w-Mf-odi"/>
                             <constraint firstItem="IDZ-VM-iWG" firstAttribute="leading" secondItem="XMr-Jo-s3k" secondAttribute="leading" constant="8" id="I8r-UU-oTW"/>
                             <constraint firstItem="cz7-yK-Jit" firstAttribute="top" secondItem="XMr-Jo-s3k" secondAttribute="top" constant="8" id="LMS-E6-LpP"/>
                             <constraint firstAttribute="bottom" secondItem="IDZ-VM-iWG" secondAttribute="bottom" constant="8" id="St4-sA-och"/>
                             <constraint firstItem="cz7-yK-Jit" firstAttribute="leading" secondItem="XMr-Jo-s3k" secondAttribute="leading" constant="8" id="U0d-0x-ly7"/>
                             <constraint firstItem="oA2-je-8Km" firstAttribute="leading" secondItem="cz7-yK-Jit" secondAttribute="trailing" constant="8" id="jJf-Yg-WKN"/>
                             <constraint firstItem="XMr-Jo-s3k" firstAttribute="trailing" secondItem="oA2-je-8Km" secondAttribute="trailing" constant="8" id="kiw-ik-fmR"/>
+                            <constraint firstItem="XMr-Jo-s3k" firstAttribute="trailing" secondItem="fEN-i4-gi5" secondAttribute="trailing" constant="8" id="mN8-sG-6XF"/>
                             <constraint firstItem="eJx-PL-bk6" firstAttribute="top" secondItem="XMr-Jo-s3k" secondAttribute="top" constant="50" id="maQ-qw-9rV"/>
                             <constraint firstItem="XMr-Jo-s3k" firstAttribute="trailing" secondItem="IDZ-VM-iWG" secondAttribute="trailing" constant="8" id="mpC-tj-ybu"/>
                             <constraint firstItem="eJx-PL-bk6" firstAttribute="leading" secondItem="cz7-yK-Jit" secondAttribute="trailing" constant="8" id="oNh-c9-U5Z"/>
                             <constraint firstItem="IDZ-VM-iWG" firstAttribute="top" secondItem="cz7-yK-Jit" secondAttribute="bottom" constant="8" id="rfd-U1-rJe"/>
+                            <constraint firstItem="fEN-i4-gi5" firstAttribute="leading" secondItem="cz7-yK-Jit" secondAttribute="trailing" constant="8" id="vt9-C6-76Z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XMr-Jo-s3k"/>
                     </view>
                     <connections>
+                        <outlet property="averageLabel" destination="fEN-i4-gi5" id="Xsl-2D-lkH"/>
                         <outlet property="imageView" destination="cz7-yK-Jit" id="nGh-J4-rPb"/>
                         <outlet property="overViewLabel" destination="IDZ-VM-iWG" id="Xcm-C0-qOn"/>
                         <outlet property="releaseDateLabel" destination="oA2-je-8Km" id="bm2-GG-sXg"/>

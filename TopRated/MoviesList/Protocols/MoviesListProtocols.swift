@@ -41,6 +41,7 @@ protocol MoviesListInteractorOutputProtocol: class {
   * Add here your methods for communication INTERACTOR -> PRESENTER
   */
   func didFetchTopRatedMovies(movies: [Movie])
+  func showMovies(movies: [Movie])
 }
 
 protocol MoviesListInteractorInputProtocol: class
@@ -51,7 +52,10 @@ protocol MoviesListInteractorInputProtocol: class
   /**
   * Add here your methods for communication PRESENTER -> INTERACTOR
   */
-  func fetchTopRatedMovies()
+  func saveMovies(movies: [Movie])
+  func deleteMovies()
+  func saveCurrentDate()
+  func validateDate()
 }
 
 protocol MoviesListDataManagerInputProtocol: class
@@ -74,4 +78,7 @@ protocol MoviesListLocalDataManagerInputProtocol: class
   /**
   * Add here your methods for communication INTERACTOR -> LOCALDATAMANAGER
   */
+  func saveMoviesInDB(movies: [Movie])
+  func retriveMoviesFromDB () -> [Movie]
+  func deleteMoviesFromDB()
 }

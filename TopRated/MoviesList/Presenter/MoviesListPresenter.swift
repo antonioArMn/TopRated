@@ -17,14 +17,21 @@ class MoviesListPresenter: MoviesListPresenterProtocol, MoviesListInteractorOutp
   init() {}
   
   func viewDidLoad() {
-    interactor?.fetchTopRatedMovies()
+    interactor?.validateDate()
   }
   
   func didFetchTopRatedMovies(movies: [Movie]) {
+    interactor?.saveCurrentDate()
+    interactor?.deleteMovies()
+    interactor?.saveMovies(movies: movies)
     view?.reloadTable(with: movies)
   }
   
   func showMovieDetail(forMovie movie: Movie) {
     wireFrame?.presentMovieDetailScreen(from: view!, forMovie: movie)
+  }
+  
+  func showMovies(movies: [Movie]) {
+    view?.reloadTable(with: movies)
   }
 }
