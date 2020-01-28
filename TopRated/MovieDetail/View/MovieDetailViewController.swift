@@ -15,6 +15,7 @@ class MovieDetailViewController: UIViewController, MovieDetailViewProtocol {
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var releaseDateLabel: UILabel!
   @IBOutlet weak var overViewLabel: UITextView!
+  @IBOutlet weak var averageLabel: UILabel!
   
   var presenter: MovieDetailPresenterProtocol?
   
@@ -29,6 +30,7 @@ class MovieDetailViewController: UIViewController, MovieDetailViewProtocol {
     self.titleLabel.text = movie.title
     self.releaseDateLabel.text = movie.releaseDate
     self.overViewLabel.text = movie.overview
+    self.averageLabel.text = "\(movie.voteAverage) ★"
     if let posterPath = movie.posterPath {
       MoviesListAPIDataManager.downloadPosterImage(posterPath: posterPath) { (data, error) in
         guard let data = data else { return }
